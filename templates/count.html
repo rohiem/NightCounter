@@ -1,0 +1,10 @@
+<h1><a href="{% url "home" %}">home</a></h1>
+<h1><a href="{% url "about" %}">about</a></h1>
+
+<h1>there are {{count}} words in your website</h1>
+<h1>full text :</h1>
+<h1>{{ fulltext }}</h1>
+{%for word , counttottal in wordsorted%}
+<h1>{{word}}={{counttottal}}</h1>
+<br>
+{%endfor%}
