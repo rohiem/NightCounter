@@ -34,12 +34,15 @@
         <header class="masthead">
             <div class="container d-flex h-100 align-items-center">
                 <div class="mx-auto text-center">
-                                <img class="img-fluid" src="{% static 'img/abc.png' %}" alt="" /><br><br><br>
+          
 
-                <h3>the number of nights is</h3>
+                    <h1 class="mx-auto my-0 text-uppercase">The Night Counter</h1>
+                    <h3>there are {{count}} words in your website</h3>
+<h3>full text :</h3>
+<h5>{{ fulltext }}</h5>
 
-                    <h1 class="mx-auto my-0 text-uppercase">{{wordcount}}</h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5"></h2>
+
+<br>
                 </div>
             </div>
         </header>
@@ -48,11 +51,40 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 mx-auto">
-            
+                    
+           
+
+<table class="table table-sm table-dark">
+  <thead>
+    <tr>
+      <th scope="col">THE WORD</th>
+      <th scope="col">THE COUNT</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for word , counttottal in wordsorted%}
+        <tr>
+
+      <th scope="row">{{word}}</th>
+      <td>{{counttottal}}</td>
+          </tr>
+
+      {%endfor%}
+
+    
+  </tbody>
+</table>
+
                     </div>
                 </div>
+            
                 <br><br><br><br>
+                <br><br><br><br>
+
+
+                <img class="img-fluid" src="{% static 'img/abc.png' %}" alt="" />
                 <br><br>
+                <br>
             </div>
         </section>
         <!-- Projects
@@ -162,10 +194,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Core theme JS
+        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
 </html>
-
-
--->

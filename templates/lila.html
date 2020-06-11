@@ -34,12 +34,8 @@
         <header class="masthead">
             <div class="container d-flex h-100 align-items-center">
                 <div class="mx-auto text-center">
-                                <img class="img-fluid" src="{% static 'img/abc.png' %}" alt="" /><br><br><br>
-
-                <h3>the number of nights is</h3>
-
-                    <h1 class="mx-auto my-0 text-uppercase">{{wordcount}}</h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5"></h2>
+                    <h1 class="mx-auto my-0 text-uppercase">The Night Counter</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">If you are a big fan of Amr Diab or like singing along with his songs ,,,we all have this confusing question why he always singing for night and how many nights did he sang in his songs</h2>
                 </div>
             </div>
         </header>
@@ -48,10 +44,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 mx-auto">
-            
+                             {% block content %}
+                {% endblock content %}
                     </div>
                 </div>
                 <br><br><br><br>
+                <img class="img-fluid" src="{% static 'img/abc.png' %}" alt="" />
                 <br><br>
             </div>
         </section>
@@ -162,10 +160,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Core theme JS
+        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
 </html>
-
-
--->

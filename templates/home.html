@@ -1,9 +1,16 @@
-<h1><a href="{% url "home" %}">words count</a></h1>
-<h1><a href="{% url "about" %}">about</a></h1>
-<h3>{{ rohiem }}</h3>
+{% extends "lila.html" %}
+{% block content %}
+ <h2 class="text-white mb-4 text-center">put your lyrics here and we'll count the nights for you</h2>
+<div class="form-group purple-border">
 <form action={% url "count" %}>
-
-    <textarea name="fulltext" id="textentry" cols="100" rows="20"></textarea>
+{% csrf_token %}
+    <textarea name="fulltext" class="form-control" id="exampleFormControlTextarea4" cols="100" rows="20"></textarea>
     <br>
-    <input type="submit" value="count!"/>
-</form>
+    <br>
+    <br>
+    <input class="btn btn-primary js-scroll-trigger" name="count" type="submit" value="count!"/>
+    <input class="btn btn-primary js-scroll-trigger" name="sort" type="submit" value="sort!"/>
+
+</form></div>
+
+{% endblock content %}
