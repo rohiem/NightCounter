@@ -1,0 +1,16 @@
+{% extends "lila.html" %}
+{% block content %}
+ <h2 class="text-white mb-4 text-center">put your lyrics here and we'll count the nights for you</h2>
+<div class="form-group purple-border">
+<form action={% url "count" %}>
+{% csrf_token %}
+    <textarea name="fulltext" class="form-control" id="exampleFormControlTextarea4" cols="100" rows="20"></textarea>
+    <br>
+    <br>
+    <br>
+    <input class="btn btn-primary js-scroll-trigger" name="count" type="submit" value="count!"/>
+    <input class="btn btn-primary js-scroll-trigger" name="sort" type="submit" value="sort!"/>
+
+</form></div>
+
+{% endblock content %}
