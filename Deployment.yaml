@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: my-django-app
-        image: your-image-registry/your-django-image:latest
+        image: rohiem/night:latest
         ports:
         - containerPort: 8000
